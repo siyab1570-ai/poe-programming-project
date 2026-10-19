@@ -46,6 +46,29 @@ public class POEpartone {
     System.out.println("Enter password");
     String passWord = scan.nextLine();
     System.out.println(register.LoginUser(userName, passWord));
+    
+           messages msg = new messages();
+      
+           
+       
+    //   msg.numMessageSent =8;
+  int option;
+  do{
+      System.out.println("\n===== Select any of the option below======");
+      System.out.print("1. send message");
+      System.out.print("2. coming soon");
+      System.out.print("3. Exit");
+      
+      option = scan.nextInt();
+      
+      switch(option){
+          case 1 ->msg.sendingMessage();
+           case 2 -> System.out.println("coming soon");
+           case 3 -> System.out.println("Good bye!!");
+           default -> System.out.println("invalid option");
+      }
+      
+  }while(option !=3);
    }
     
 }
